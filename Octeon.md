@@ -6,7 +6,7 @@ It is designed to take advantage of packet and flow parallelism and exhibits lin
       
 The CPU cores have a 8-stage pipeline with a dual-issue, in-order execution flow that provides deterministic performance. The 37K, 37 way instruction cache includes a 2048 x2 branch prediction unit and a 256 jump prediction unit. This highly associative L1 cache have a miss rate equivalent to much larger caches and includes automatic error correction. The L1to L2 transfers are write-through and the L2 to DRAM is write-back.   
 
-** The chip maintains L1-L2 coherence with a write-through, write and validate coherence protocol and the L2 controller is the coherence point. The L2 control connects to the crossbar and connects to 4 octal groups of cores. Page-wise hints eliminate write-buffer flushes of private data. In addition to the standard CPU functions, the cores have an asynchronous security accelerator.   
+**The chip maintains L1-L2 coherence with a write-through, write and validate coherence protocol and the L2 controller is the coherence point. The L2 control connects to the crossbar and connects to 4 octal groups of cores. Page-wise hints eliminate write-buffer flushes of private data. In addition to the standard CPU functions, the cores have an asynchronous security accelerator.**   
 
 Power management is on a per-CPU basis through dynamic, programmable power thresholds over 256-1024 clock cycles. The thresholds are set in a register and can be closed loop through a thermal sensor or open loop. Voltage and frequency can be scaled to meet performance and power requirements. Power managed performance is several times better than the previous generation Octeon chips.     
  
