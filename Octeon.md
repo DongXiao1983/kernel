@@ -11,3 +11,7 @@ The CPU cores have a 8-stage pipeline with a dual-issue, in-order execution flow
 Power management is on a per-CPU basis through dynamic, programmable power thresholds over 256-1024 clock cycles. The thresholds are set in a register and can be closed loop through a thermal sensor or open loop. Voltage and frequency can be scaled to meet performance and power requirements. Power managed performance is several times better than the previous generation Octeon chips.     
  
 Integrated co-processors include packet, TCP, security, and compression/decompression. The chip can saturate one of its 40 Gb pipes with less than 5 cores. IPSEC takes 16 cores to fill a 40 Gb pipe. The large number of high-speed I/Os and the core performance means that the chip can handle large volumes of traffic with, or without encryption.
+
+
+#### The Core i7 980X Review: Intel's First 6-Core Desktop CPU    
+[http://www.anandtech.com/show/2960/2] ( http://www.anandtech.com/show/2960/2 )
