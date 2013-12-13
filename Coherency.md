@@ -28,3 +28,5 @@
 ####Cache
 [Cache-Memory-10-03.pdf](http://www.valleytalk.org/page/2/?s=cache	)     
 [剖析Disruptor:为什么会这么快](http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5NzQ3ODAwMQ==&appmsgid=10002729&itemidx=1&sign=627b5ea988a8fcbb2b48a1fe3d307c89#wechat_redirect)    
+
+#### Working Effectively with Legacy Code 
