@@ -1,5 +1,6 @@
-###Mechanical Sympathy    
-[Mechanical Sympathy] (http://mechanical-sympathy.blogspot.fi/)    
+###Mechanical Sympathy     
+[Mechanical Sympathy] (http://mechanical-sympathy.blogspot.fi/)     
+[Discuss Group] (https://groups.google.com/forum/#!forum/mechanical-sympathy)    
 
 [Lock-Based vs Lock-Free Concurrent Algorithms] 
 
