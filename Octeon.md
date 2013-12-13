@@ -1,5 +1,5 @@
 #### Intruduction    
-
+----------    
 [http://http://mandetech.com/2011/09/05/32-core-octeon-from-cavium/](http://http://mandetech.com/2011/09/05/32-core-octeon-from-cavium/ "Link")     
 
 It is designed to take advantage of packet and flow parallelism and exhibits linear performance scaling with the number of cores. This chip has 32 MIPS64 cores running at 1.5 GHz, each with separate I- and D-caches and a hardware accelerator for cryptographic operations. On-board peripherals include 4 separate DDR3 controllers, RAID 5/6, 20 SERDES for serial communications to other parts of the system, 4 MB of shared L2 cache and an internal crossbar switch for core to core data transfers. The total chip uses 800 M transistors in a 65 nm process.  
@@ -12,6 +12,6 @@ Power management is on a per-CPU basis through dynamic, programmable power thres
  
 Integrated co-processors include packet, TCP, security, and compression/decompression. The chip can saturate one of its 40 Gb pipes with less than 5 cores. IPSEC takes 16 cores to fill a 40 Gb pipe. The large number of high-speed I/Os and the core performance means that the chip can handle large volumes of traffic with, or without encryption.
 
-
+----------    
 #### The Core i7 980X Review: Intel's First 6-Core Desktop CPU    
 [http://www.anandtech.com/show/2960/2] ( http://www.anandtech.com/show/2960/2 )
