@@ -2,7 +2,6 @@
 [Mechanical Sympathy] (http://mechanical-sympathy.blogspot.fi/)     
 [Discuss Group] (https://groups.google.com/forum/#!forum/mechanical-sympathy)    
 
-[Lock-Based vs Lock-Free Concurrent Algorithms] 
 
 [CPU Cache Flushing Fallacy] (http://mechanical-sympathy.blogspot.fi/2013/02/cpu-cache-flushing-fallacy.html)     
 [Further Adventures With CAS Instructions And Micro Benchmarking] (http://mechanical-sympathy.blogspot.fi/2013/01/further-adventures-with-cas.html)    
