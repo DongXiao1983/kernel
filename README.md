@@ -1,4 +1,4 @@
 kernel
 ======
 
-My kernel study road
+Some kernel technical
