@@ -1,5 +1,4 @@
 kernel
 ======
    
-Some kernel technical   
-Currently 
+Focus on memory & cache now :)
