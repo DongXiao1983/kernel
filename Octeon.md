@@ -14,4 +14,4 @@ Integrated co-processors include packet, TCP, security, and compression/decompre
 
 ----------    
 #### The Core i7 980X Review: Intel's First 6-Core Desktop CPU    
-[http://www.anandtech.com/show/2960/2] ( http://www.anandtech.com/show/2960/2 )
+[The Core i7 980X Review: Intel's First 6-Core Desktop CPU] ( http://www.anandtech.com/show/2960/2 )
