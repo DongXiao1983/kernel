@@ -1,6 +1,6 @@
 #### Intruduction    
 ----------    
-[http://http://mandetech.com/2011/09/05/32-core-octeon-from-cavium/](http://http://mandetech.com/2011/09/05/32-core-octeon-from-cavium/ "Link")     
+[32 Core Octeon from Cavium](http://mandetech.com/2011/09/05/32-core-octeon-from-cavium/ "Link")     
 
 It is designed to take advantage of packet and flow parallelism and exhibits linear performance scaling with the number of cores. This chip has 32 MIPS64 cores running at 1.5 GHz, each with separate I- and D-caches and a hardware accelerator for cryptographic operations. On-board peripherals include 4 separate DDR3 controllers, RAID 5/6, 20 SERDES for serial communications to other parts of the system, 4 MB of shared L2 cache and an internal crossbar switch for core to core data transfers. The total chip uses 800 M transistors in a 65 nm process.  
       
