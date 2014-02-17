@@ -5,3 +5,6 @@
 `dig +trace baidu.com`    
 [DNS 2014-01-21 ](http://www.freebuf.com/articles/network/24180.html)    
   
+
+2. When fstab error cause / write-protect     
+`mount / -o remount,rw`
