@@ -14,13 +14,16 @@
 > insmod build/kmod/igb_uio.ko    
 
 #### Bind Intel devices to igb_uio.
-> tools/pci_unbind.py --bind=igb_uio $(tools/pci_unbind.py --status | sed -rn 's,.* if=([^ ]*).*igb_uio *$,\1,p')    
-#### Reserve huge pages memory.
+> tools/pci_unbind.py --bind=igb_uio $(tools/pci_unbind.py --status | sed -rn 's,.* if=([^ ]*).*igb_uio *$,\1,p')        
+
+#### Reserve huge pages memory.    
 > mkdir -p /mnt/huge
 > mount -t hugetlbfs nodev /mnt/huge
-> echo 64 > /sys/devices/system/node/node0/hugepages/hugepages-2048kB/nr_hugepages
+> echo 64 > /sys/devices/system/node/node0/hugepages/hugepages-2048kB/nr_hugepages    
+
 ####  Set the highest frequency.
-> for gov in /sys/devices/system/cpu/*/cpufreq/scaling_governor ; do echo performance >$gov ; done
+> for gov in /sys/devices/system/cpu/*/cpufreq/scaling_governor ; do echo performance >$gov ; done    
+
 #### Run poll-mode driver test (with a cable between ports).
     build/app/testpmd -c7 -n3 -- -i --nb-cores=2 --nb-ports=2
     
