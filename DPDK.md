@@ -52,3 +52,11 @@
       RX-packets: 6699967RX-dropped: 0 RX-total: 6699967
       TX-packets: 7139974TX-dropped: 0 TX-total: 7139974
   
+## Knowldge 
+
+ Bob Jenkins  :     
+   the king of Hashing [Web](http://burtleburtle.net/bob/hash/index.html)    
+ 
+ SR-IOV :     
+ [SR-IOV Architecture](http://msdn.microsoft.com/en-us/library/windows/hardware/hh440238(v=vs.85).aspx)       
+ [SR-IOV Data Paths](http://msdn.microsoft.com/en-us/library/windows/hardware/hh440150(v=vs.85).aspx)    
