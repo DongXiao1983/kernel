@@ -27,7 +27,6 @@ This is a new in-memory filesystem like tmpfs and is presented by 2.6 kernel. Pa
 
 
 ### 3. 使用huge page的优点    
-对于较大的系统内存以及sga，使用hugepage可以极大程度的提高Oracle数据库性能。    
     
 #### a、Not swappable    
 HugePages are not swappable. Therefore there is no page-in/page-out mechanism overhead.HugePages are universally regarded as pinned.    
