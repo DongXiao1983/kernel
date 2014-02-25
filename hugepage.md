@@ -23,4 +23,30 @@ hugetlb 是TLB中指向HugePage的一个entry(通常大于4k或预定义页面�
  
 #### hugetlbfs:    
 This is a new in-memory filesystem like tmpfs and is presented by 2.6 kernel. Pages allocated on hugetlbfs type filesystem are allocated in HugePages.    
-一个类似于tmpfs的新的in-memory filesystem，在2.6内核被提出。    
+一个类似于tmpfs的新的in-memory filesystem，在2.6内核被提出。 
+
+
+### 3. 使用huge page的优点    
+对于较大的系统内存以及sga，使用hugepage可以极大程度的提高Oracle数据库性能。    
+    
+#### a、Not swappable    
+HugePages are not swappable. Therefore there is no page-in/page-out mechanism overhead.HugePages are universally regarded as pinned.    
+无需交换。也就是不存在页面由于内存空间不足而存在换入换出的问题    
+ 
+#### b、Relief of TLB pressure    
+Hugepge uses fewer pages to cover the physical address space, so the size of “book keeping” (mapping from the virtual to the physical address) decreases, so it requiring fewer entries in the TLB    
+TLB entries will cover a larger part of the address space when use HugePages, there will be fewer TLB misses before the entire or most of the SGA is mapped in the SGA    
+Fewer TLB entries for the SGA also means more for other parts of the address space    
+减轻TLB的压力，也就是降低了cpu cache可缓存的地址映射压力。由于使用了huge     page，相同的内存大小情况下，管理的虚拟地址数量变少。    
+TLB entry可以包含更多的地址空间，cpu的寻址能力相应的得到了增强。    
+ 
+#### c、Decreased page table overhead    
+Each page table entry can be as large as 64 bytes and if we are trying to handle 50GB of RAM, the pagetable will be approximately 800MB in size which is practically will not fit in 880MB size lowmem (in 2.4 kernels - the page table is not necessarily in lowmem in 2.6 kernels) considering the other uses of lowmem. When 95% of memory is accessed via 256MB hugepages, this can work with a page table of approximately 40MB in total. See also Document 361468.1.     
+降低page table负载，对于普通的page，每个entry需要64bytes进行管理，对于50gb的内存，管理这些entry，需要800mb的大小
+(50*1024*1024)kb/4kb*64bytes/1024/1024=800mb。     
+ 
+#### d、Eliminated page table lookup overhead   
+Since the pages are not subject to replacement, page table lookups are not required.( 消除page table查找负载)     
+ 
+#### e、Faster overall memory performance     
+On virtual memory systems each memory operation is actually two abstract memory operations. Since there are fewer pages to work on, the possible bottleneck on page table access is clearly avoided.(提高内存的整体性能)       
