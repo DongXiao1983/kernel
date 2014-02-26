@@ -8,3 +8,6 @@
 
 2. When fstab error cause / write-protect     
 `mount / -o remount,rw`
+
+4. show sysfs     
+`systool`
