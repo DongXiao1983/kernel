@@ -11,3 +11,9 @@
 
 4. show sysfs     
 `systool`
+
+4. Force insert kmod     
+`insmod -f xxx.ko`
+
+4. check kernel configure     
+`zcat /proc/config.gz | grep xxxx`
