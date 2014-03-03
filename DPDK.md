@@ -60,3 +60,8 @@
  SR-IOV :     
  [SR-IOV Architecture](http://msdn.microsoft.com/en-us/library/windows/hardware/hh440238(v=vs.85).aspx)       
  [SR-IOV Data Paths](http://msdn.microsoft.com/en-us/library/windows/hardware/hh440150(v=vs.85).aspx)    
+
+
+ Virtio:
+ [ An I/O virtualization framework for Linux](http://www.ibm.com/developerworks/library/l-virtio/index.html)
+ [ High performance with virtio](http://www.linux-kvm.org/page/Virtio)
