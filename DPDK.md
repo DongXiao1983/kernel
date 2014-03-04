@@ -65,4 +65,7 @@
  Virtio:
  [ An I/O virtualization framework for Linux](http://www.ibm.com/developerworks/library/l-virtio/index.html)    
  [ High performance with virtio](http://www.linux-kvm.org/page/Virtio)      
- A series Document --> [Virtio：针对 Linux 的 I/O 虚拟化框架（ibm）](http://www.cnblogs.com/chinacloud/archive/2010/08/10/1796824.html)
+ A series Document --> [Virtio：针对 Linux 的 I/O 虚拟化框架（ibm）](http://www.cnblogs.com/chinacloud/archive/2010/08/10/1796824.html)    
+ 
+ ###[Para-virtualized] (Virtualization for Linux on IBM x86 servers)
+ 
