@@ -20,8 +20,7 @@
 #####Library Cache Coherence
 [Library Cache Coherence](http://dspace.mit.edu/bitstream/handle/1721.1/62580/MIT-CSAIL-TR-2011-027.pdf?sequence=1)
 
-####7个示例科普CPU Cache  
-[7个示例科普CPU Cache ](http://coolshell.cn/articles/10249.html)    
+   
 ####ucompower    
 [LRU 算法的错误] (http://www.ucompower.com/lru%E7%BC%93%E5%AD%98%E7%AE%97%E6%B3%95%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8Cucompower%E7%9A%84%E5%8F%91%E7%8E%B0/ )
 
@@ -29,4 +28,4 @@
 [Cache-Memory-10-03.pdf](http://www.valleytalk.org/page/2/?s=cache	)     
 [剖析Disruptor:为什么会这么快](http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5NzQ3ODAwMQ==&appmsgid=10002729&itemidx=1&sign=627b5ea988a8fcbb2b48a1fe3d307c89#wechat_redirect)    
 
-#### Working Effectively with Legacy Code 
+#### 《Working Effectively with Legacy Code 》
