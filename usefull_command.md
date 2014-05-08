@@ -17,3 +17,6 @@
 
 4. check kernel configure     
 `zcat /proc/config.gz | grep xxxx`
+
+4. Display kernel module parameters      
+`systool`
