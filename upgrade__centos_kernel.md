@@ -16,7 +16,7 @@
 	yum --enablerepo=elrepo-kernel install kernel-lt -y   
 	yum --enablerepo=elrepo-kernel install kernel-ml -y      
  
-4 . 编辑grub.conf文件，修改Grub引导顺序  
+4 . 编辑grub.conf文件，修改Grub引导顺序 default=0      
 
 	default=0    
 	timeout=5    
