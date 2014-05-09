@@ -8,7 +8,7 @@
   
 2. 安装ELRepo到CentOS-6.5中    
   
-  http://www.elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm    
+  rpm -ivh http://www.elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm    
   
 3. 安装kernel-lt（lt=long-term）    
 
