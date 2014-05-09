@@ -12,7 +12,7 @@ OCTEON专为包处理而设计，有针对性地设计了大量硬件加速单�
 OCTEON是一个专用处理器，DPDK尝试在一个通用处理器上实现OCTEON上做过的事情，所以对比分析对于系统的理解非常有意思。    
 
 OCTEON的manual难读，但是API简洁；DPDK的guide易读，但是API比较烦。觉得主要是X86没有OCTEON纯粹和优美。OCTEON里面把事情都抽象得恰到好处，所以这个抽象的过程很让人头疼，但是一旦把抽象模型建立好了，API就很纯粹，很优美。比如DPDK的mempool就很拖泥带水，OCTEON的FPA就很干脆利落。FPA就是FPA，很单纯，所以可以在软硬件之间互动。DPDK mempool的初始化竟然还要提供两个回调函数，晕。
-
+###内存管理  
 内存管理OCTEON SE环境中，默认情况下全局变量是核本地的，要在核间共享的全局数据需要用CVMX_SHARED宏定义来明确定义。DPDK在各个核上跑的是线程，通过pthread setaffinity调用绑定到不同核上，因此，我的理解是，全局变量默认是核间共享的。
 
 mempool与FPAmempool中的free object/buffer是通过ring来管理的，这个大概是为了借助ring的可以被多核同时操作的特性，来达到mempool可以被多核/多线程操作的目的。但是这样ring就占用了额外的内存，而且DPDK的ring是fixed size的。另外，mempool还设计了cache机制，以便减少访问ring的频率，最终是为了减少lock冲突。因为DPDK的ring不是完全的无锁设计。
@@ -25,9 +25,8 @@ mempool与FPAmempool中的free object/buffer是通过ring来管理的，这个�
 
 针对内存访问的问题，OCTEON在DRAM控制器中做了优化。首先，OCTEON是一个多核环境，同时会有很多DRAM访问请求。DRAM根据channel等信息自动对请求做排序和乱序处理。这个对软件是完全透明的。估计Intel的处理器也会做类似的优化。
 
-废了一袋烟的功夫，改天再写。to be continued...
 
-PIP/PKO与rte_ether     
+###PIP/PKO与rte_ether     
 
 说X86的网络接口就不能不提这堆缩写了，如果没有了这堆feature，那么X86做包处理就没戏了。并不是每个feature都同时需要。     
 RSS, Receive Side Scaling    
@@ -51,7 +50,7 @@ Timer DPDK的timer实现原理没有在文档中描述。不过有一点是明�
 
 OCTEON通过POW单元统一管理所有消息/报文，core使用唯一的get_work接口处理所有事情，这样做有几方面好处，第一是避免无效轮询造成的CPU浪费，第二是优先级可以集中同时约束不同种类的事情。想象一下，如果用单独的接口分别轮询收包和timer，要实现高优先级的timer消息优先被处理，低优先级timer消息与接收的报文统一按发生的时间顺序处理，这是一个多么麻烦和费CPU的事情。
 
-Intel DPDK timer算法分析    
+####Intel DPDK timer算法分析    
 
 三个List，pending是已经开始但是还没有到时的定时器列表，expired是已经到时了等待处理的定时器列表，done是已经处理完的定时器列表。已经处理完的含义是其关联的callback被调用过。
 
@@ -60,19 +59,20 @@ Intel DPDK timer算法分析
 没办法，只能自己再费一袋烟的功夫做一个真正好使的timer。不过可以在DPDK timer的基础之上改造，这样工作量可以减到最低。    
 
 
-DPDK里面疑惑的地方    
+####DPDK里面疑惑的地方    
 
-1. 为什么example中，RX descriptor比TX descriptor少？    
-#define RTE_TEST_RX_DESC_DEFAULT 128    
-#define RTE_TEST_TX_DESC_DEFAULT 512    
+1. 为什么example中，RX descriptor比TX descriptor少？   
+2.  
+	    #define RTE_TEST_RX_DESC_DEFAULT 128
+	    #define RTE_TEST_TX_DESC_DEFAULT 512
 
 2. example中竟然单独用unsigned定义变量，没有int，这样规范吗？这样定义出来到底是几位的？    
 
-Q&A
+####Q&A
 
 热情的长风2013-04-17 15:20:10[回复] [删除] [举报]
-支持永龙2372，我对其硬件访问层比较感兴趣：如何在用户态直接收包的？能绕过内核？我觉得这是性能中很重要的问题，其他的库，都是浮云。。
->> 在用户态能访问寄存器以及rx/tx descriptor ring就可以收发包了，这个Linux是支持的，比如mmap技术。BTW，DPDK只是利用了Linux的一些现成技术。这个在tilera上都是这么用的，OCTEON的SDK也支持这种模式。其它的实现对性能也很重要，比如poll mode driver。引用一位朋友前几天说的话，很多个小优化最终形成很大的差距。
+支持永龙2372，我对其硬件访问层比较感兴趣：如何在用户态直接收包的？能绕过内核？我觉得这是性能中很重要的问题，其他的库，都是浮云。。    
+在用户态能访问寄存器以及rx/tx descriptor ring就可以收发包了，这个Linux是支持的，比如mmap技术。BTW，DPDK只是利用了Linux的一些现成技术。这个在tilera上都是这么用的，OCTEON的SDK也支持这种模式。其它的实现对性能也很重要，比如poll mode driver。引用一位朋友前几天说的话，很多个小优化最终形成很大的差距。
 
 
 转载请保留原出处以及作者联系方式，谢谢！ylmaisiyuan@163.com，
