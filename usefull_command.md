@@ -20,3 +20,8 @@
 
 4. Display kernel module parameters      
 `systool`
+
+
+4. Display kill signal       
+`kill -l`
+
