@@ -25,3 +25,5 @@
 4. Display kill signal       
 `kill -l`
 
+5. Hugetable fs       
+`mount -t hugetables nodev /mnt/hugetables`  
