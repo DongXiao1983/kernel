@@ -28,5 +28,5 @@
 5. Hugetable fs       
 `mount -t hugetables nodev /mnt/hugetables`  
 
-6. SSH
+6. SSH   
 ` ssh -vvv -T -l wrsroot 10.17.85.55 info `
