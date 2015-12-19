@@ -30,3 +30,7 @@
 
 6. SSH   
 ` ssh -vvv -T -l wrsroot 10.17.85.55 info `
+
+7. netstat   
+` netstat --tnulT `   
+
