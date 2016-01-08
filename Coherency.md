@@ -21,8 +21,8 @@
 [Library Cache Coherence](http://dspace.mit.edu/bitstream/handle/1721.1/62580/MIT-CSAIL-TR-2011-027.pdf?sequence=1)
 
    
-####ucompower    
-[LRU 算法的错误] (http://www.ucompower.com/lru%E7%BC%93%E5%AD%98%E7%AE%97%E6%B3%95%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8Cucompower%E7%9A%84%E5%8F%91%E7%8E%B0/ )
+####ucompower      
+[LRU 算法的错误] (http://www.ucompower.com/lru%E7%BC%93%E5%AD%98%E7%AE%97%E6%B3%95%E7%9A%84%E9%94%99%E8%AF%AF%E5%92%8Cucompower%E7%9A%84%E5%8F%91%E7%8E%B0/ )   
 
 ####Cache
 [Cache-Memory-10-03.pdf](http://www.valleytalk.org/page/2/?s=cache	)     
