@@ -18,3 +18,7 @@
          Architecture: x86-64  
 
        [root@localhost ~]hostnamectl set-hostname <new Name> --static --pretty
+
+
+    
+vfpc10 ;  do  hostnamectl set-hostname vfpc10 --static --transient -H root@vfpc10 ;done
