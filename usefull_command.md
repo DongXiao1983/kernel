@@ -34,3 +34,8 @@
 7. netstat   
 ` netstat --tnulT `   
 
+8. journalctl   
+` journalctl -o json --since='2016-08-07 22:37:14' --until='2016-08-07 22:39:00' --no-pager `  
+
+9. systemctl   
+` sudo systemctl status --lines=0 quorate-monitor.service|cat `   
